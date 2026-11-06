@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F6FAF9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101615" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Apps by Vishwanath — private, small apps that keep data on your own devices. Kable and callApp.">
+  <link rel="icon" href="icon.png" type="image/png">
+  <title>Apps by Vishwanath</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #F6FAF9;
+      --surface: #FFFFFF;
+      --surface-variant: #ECF3F2;
+      --text: #14201F;
+      --muted: #475958;
+      --outline: #6E8280;
+      --primary: #00796B;
+      --on-primary: #FFFFFF;
+      --primary-hover: #00695C;
+      --brand: #00B3A1;
+      --on-brand: #04241F;
+      --focus: #00796B;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --background: #101615;
+        --surface: #1A2321;
+        --surface-variant: #232F2D;
+        --text: #EAF2F0;
+        --muted: #B6C6C3;
+        --outline: #849892;
+        --primary: #00B3A1;
+        --on-primary: #04241F;
+        --primary-hover: #3FD3C5;
+        --brand: #00B3A1;
+        --on-brand: #04241F;
+        --focus: #00B3A1;
+      }
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--background);
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--background);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: 24px 20px 40px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 56px;
+    }
+
+    .site-mark {
+      flex: none;
+      width: 40px;
+      height: 40px;
+    }
+
+    .site-wordmark {
+      font-size: 1.375rem;
+      font-weight: 650;
+      line-height: 1.25;
+      letter-spacing: 0.01em;
+    }
+
+    .intro {
+      padding-top: 40px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      font-weight: 650;
+      line-height: 1.25;
+      max-width: 34ch;
+    }
+
+    .tagline {
+      margin: 10px 0 0;
+      max-width: 46ch;
+      color: var(--muted);
+      font-size: 1.125rem;
+    }
+
+    .cards {
+      list-style: none;
+      margin: 32px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 20px;
+      background: var(--surface);
+      border: 1.5px solid var(--outline);
+      border-radius: 24px;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .card-icon {
+      flex: none;
+      width: 64px;
+      height: 64px;
+      border-radius: 22%;
+      background: var(--surface-variant);
+    }
+
+    .card-name {
+      margin: 0;
+      font-size: 1.375rem;
+      font-weight: 650;
+      line-height: 1.3;
+    }
+
+    .platform {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 1px 10px;
+      border-radius: 999px;
+      background: var(--surface-variant);
+      color: var(--muted);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .card-desc {
+      margin: 0;
+      max-width: 52ch;
+      color: var(--muted);
+    }
+
+    .card-link {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 2px;
+      padding: 6px 2px;
+      color: var(--primary);
+      font-weight: 650;
+      font-size: 1.0625rem;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .card-link svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .card-link:hover {
+        color: var(--primary-hover);
+      }
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    .site-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px 16px;
+      margin-top: auto;
+      padding-top: 40px;
+      border-top: 1px solid var(--outline);
+      color: var(--muted);
+      font-size: 0.9375rem;
+    }
+
+    .footer-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 2px;
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .footer-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .footer-link:hover {
+        color: var(--text);
+      }
+    }
+
+    @media (min-width: 720px) {
+      .page {
+        padding-top: 48px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <svg class="site-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#00B3A1"></rect>
+        <g stroke="#04241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <path d="M7.5 12.5h10"></path>
+          <path d="M14.5 8.5l4.5 4-4.5 4"></path>
+          <path d="M24.5 19.5h-10"></path>
+          <path d="M17.5 15.5l-4.5 4 4.5 4"></path>
+        </g>
+      </svg>
+      <span class="site-wordmark">Apps by Vishwanath</span>
+    </header>
+
+    <main>
+      <div class="intro">
+        <h1>Private, small apps that keep data on your own devices.</h1>
+      </div>
+
+      <ul class="cards">
+        <li class="card">
+          <div class="card-top">
+            <img class="card-icon" src="icon.png" alt="Kable app icon"
+                 width="64" height="64" decoding="async">
+            <div>
+              <h2 class="card-name">Kable</h2>
+              <span class="platform">Android + Linux</span>
+            </div>
+          </div>
+          <p class="card-desc">
+            Move files and clipboard text or images between your phone and laptop,
+            over your own Wi-Fi.
+          </p>
+          <a class="card-link" href="kable-download/">
+            Get Kable
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M8.7 5.3 15.4 12l-6.7 6.7-1.4-1.4 5.3-5.3-5.3-5.3 1.4-1.4Z"></path>
+            </svg>
+          </a>
+        </li>
+
+        <li class="card">
+          <div class="card-top">
+            <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <rect width="64" height="64" rx="14" fill="var(--surface-variant)"
+                    stroke="var(--outline)" stroke-width="2"></rect>
+              <g transform="translate(20 20)">
+                <path fill="var(--text)" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
+              </g>
+            </svg>
+            <div>
+              <h2 class="card-name">callApp</h2>
+              <span class="platform">Android</span>
+            </div>
+          </div>
+          <p class="card-desc">
+            Private calls between two phones.
+          </p>
+          <a class="card-link" href="callapp-download/">
+            Get callApp
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M8.7 5.3 15.4 12l-6.7 6.7-1.4-1.4 5.3-5.3-5.3-5.3 1.4-1.4Z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <span>Apps by Vishwanath</span>
+      <a class="footer-link" href="https://github.com/vishwanathghuge97" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.111.82-.261.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12Z"></path>
+        </svg>
+        github.com/vishwanathghuge97
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
