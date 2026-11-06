@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Apps by Vishwanath">
+  <rect width="32" height="32" rx="8" fill="#00B3A1"></rect>
+  <g stroke="#04241F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M7.5 12.5h10"></path>
+    <path d="M14.5 8.5l4.5 4-4.5 4"></path>
+    <path d="M24.5 19.5h-10"></path>
+    <path d="M17.5 15.5l-4.5 4 4.5 4"></path>
+  </g>
+</svg>

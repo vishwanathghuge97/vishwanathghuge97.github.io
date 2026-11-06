@@ -91,8 +91,10 @@ hand-edit it.
 (Kable's real icon). Each folder ships its own copy so neither repo depends
 on the other's assets.
 
-The root site's tab icon is `site/favicon.png` (a deep-teal rounded square
-with a white "V"), used by `index.html` and `404.html`. `site/callapp-icon.svg`
-is callApp's launcher icon (cream speech bubble carrying the phone handset on
-`#0B5568`, per callApp's own `ic_launcher_foreground.xml` and
-`colors.xml`), used by the callApp card in the root index.
+The root site's tab icon is `site/favicon.svg` (and its rendered copy
+`site/favicon.png`): the same teal rounded square and dark swap-arrows mark
+used by the header logo in `index.html`, used by `index.html` and
+`404.html`. `site/callapp-icon.svg` is callApp's launcher icon (cream
+speech bubble carrying the phone handset on `#0B5568`, per callApp's own
+`ic_launcher_foreground.xml` and `colors.xml`), used by the callApp card in
+the root index.
