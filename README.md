@@ -84,8 +84,15 @@ It was generated with the `qr` Dart package (already declared in
 changed. If the page URL ever changes, regenerate the SVG the same way; do not
 hand-edit it.
 
-## Icons
+## Icons and favicon
 
 `site/kable-download/icon.png` and `site/icon.png` are both copies of
-`assets/kable_icon_512.png`. Each folder ships its own copy so neither repo
-depends on the other's assets.
+`assets/kable_icon_512.png`; `icon.png` is the Kable card in the root index
+(Kable's real icon). Each folder ships its own copy so neither repo depends
+on the other's assets.
+
+The root site's tab icon is `site/favicon.png` (a deep-teal rounded square
+with a white "V"), used by `index.html` and `404.html`. `site/callapp-icon.svg`
+is callApp's launcher icon (cream speech bubble carrying the phone handset on
+`#0B5568`, per callApp's own `ic_launcher_foreground.xml` and
+`colors.xml`), used by the callApp card in the root index.
