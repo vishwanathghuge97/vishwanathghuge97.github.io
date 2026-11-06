@@ -1,6 +1,6 @@
 # Kable site
 
-Two static sites, ready to publish as two GitHub Pages repos. No build step,
+Two static sites, live on GitHub Pages. No build step,
 no dependencies, no JavaScript.
 
 | Folder               | Publishes to                                        | Repo             |
@@ -23,7 +23,7 @@ Then open:
 
 Relative links are used throughout, so the pages also work from `file://`.
 
-## Publishing (later, not done yet)
+## Publishing (live since 2026-11-06)
 
 Copy the **contents** of `site/` (not the `kable-download/` folder) into the
 `vishwanathghuge97.github.io` repo, and the contents of `site/kable-download/`
@@ -40,10 +40,14 @@ That keeps them working at any URL depth. They preview fine over
 `python3 -m http.server` (open `/404.html` or `/kable-download/404.html`), but
 `file://` won't resolve root-relative paths.
 
+Both repos were published on 2026-11-06 (Kable v3.0.0; v3.0.1 followed the
+same flow). To re-deploy after a change, do step 1 below; the rest of the
+checklist applies every time either page changes.
+
 ## Release-day checklist
 
-Publishing the two sites as the two GitHub Pages repos. No secrets, tokens or
-key paths are involved or belong in either repo.
+Re-deploying or verifying the two sites. No secrets, tokens or key paths are
+involved or belong in either repo.
 
 1. Publish `site/kable-download/` first, then `site/`:
    - Copy the **contents** of `site/kable-download/` into the `kable-download`
